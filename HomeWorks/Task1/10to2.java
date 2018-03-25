@@ -8,13 +8,11 @@ import java.util.*;
 	public static StringBuffer sbf;
 
 	public static void vvod() {
-		System.out.println("Введите число");
+		System.out.println("Enter the number");
 		Scanner sc = new Scanner(System.in);
 		if (sc.hasNextInt()) {
 			de = sc.nextInt();
-		} else {
-			System.out.println("Вы ввели не целое число");
-		}
+		} 
 	}
 
 	public static void convert(int d) {
