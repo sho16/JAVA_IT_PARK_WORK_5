@@ -19,14 +19,14 @@ class Program {
                 case 1: {
                     int a = scanner.nextInt();
                     int b = scanner.nextInt();
-                    System.out.println("–езультат");
+                    System.out.println("Result");
                 if (b>=a)
                 {
                     while ( b>=a)
                      {
                        if (b % 2==0)
                        {
-                        System.out.println("„исло");
+                        System.out.println("Number");
                         System.out.println(b);
                         b=b-1;
                        }
@@ -42,7 +42,7 @@ class Program {
                      {
                        if (a % 2==0)
                        {
-                        System.out.println("„исло");
+                        System.out.println("Number");
                         System.out.println(a);
                         a=a-1;
                        }
@@ -57,22 +57,22 @@ class Program {
                  break;
                 }
                 case 2: {
-                     System.out.println("¬ведите число");
+                     System.out.println("Enter the number");
                     int a = scanner.nextInt();
                     int sum=0;
-                    System.out.println("¬ведите количество чисел равное:" + a);
+                    System.out.println("Enter the quantity of number equal:" + a);
                     
                     while (a!=0)
                     { int chislo = scanner.nextInt();
                      sum=chislo+sum;
                      a=a-1;
                     }
-                    System.out.println("—умма чисел:" );
+                    System.out.println("Sum of  numbers:" );
                     System.out.println(sum);
                     break;
                 }
                 case 3: {
-                    System.out.println("¬ведите число");
+                    System.out.println("Enter the number");
                     int a = scanner.nextInt();
                     int b;
                     int sum=0;
