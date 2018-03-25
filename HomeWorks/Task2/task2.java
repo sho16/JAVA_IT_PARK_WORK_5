@@ -8,7 +8,7 @@ class Program {
 
         while (true) {
             System.out.println("MENU:");
-            System.out.println("1. Sum of even numbers");
+            System.out.println("1. Even numbers");
             System.out.println("2. Sum of ennered numbers");
             System.out.println("3. Sum of digits number");
             System.out.println("4. Exit");
@@ -17,9 +17,10 @@ class Program {
 
             switch (command) {
                 case 1: {
+					System.out.println("Enter the couple numbers");
                     int a = scanner.nextInt();
                     int b = scanner.nextInt();
-                    System.out.println("Result");
+					System.out.println("Result");
                 if (b>=a)
                 {
                     while ( b>=a)
