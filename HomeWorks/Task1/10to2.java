@@ -8,7 +8,7 @@ import java.util.*;
 	public static StringBuffer sbf;
 
 	public static void vvod() {
-		System.out.println("Enter the number");
+		System.out.println("Enter the numb");
 		Scanner sc = new Scanner(System.in);
 		if (sc.hasNextInt()) {
 			de = sc.nextInt();
