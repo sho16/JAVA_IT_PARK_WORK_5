@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class MainD {
+public class Main {
 
     public static int digits(int dg){
         int sum = 0;
