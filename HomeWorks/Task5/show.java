@@ -44,10 +44,4 @@ private static int show(int e, int r) {
 		     
 		   }
 
-
-
-	
-	
-
-
-	}
+}
