@@ -1,4 +1,7 @@
 
+// вместе с todouble
+
+
 class constr1 {
    int a;
    int b;
