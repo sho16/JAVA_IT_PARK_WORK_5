@@ -57,13 +57,13 @@
      <th scope="row">${buildhotel.standart}</th>
      <tr>
      <td>Кондиционер Собственная ванная комната Телевизор с плоским экраном Собственный бассейн Бесплатный Wi-Fi • Душ • Сейф • Телевизор • Телефон • Фен • Халат • Холодильник • Бесплатные туалетные принадлежности • Туалет • Отопление • Тапочки • Услуга «звонок-будильник» • Шкаф/гардероб • Полотенца • Белье • Туалетная бумага Удобства для гостей с ограничениями здоровья Цены указаны за номер включено: Завтрак</td>
-
+     <td id="hotel_id">${buildhotel.id}</td>
      <td>${buildhotel.capacity}</td>
      <td>${buildhotel.hotelprice}</td>
      <td>${buildhotel.choice}</td>
      <td><select><option value="1">Один</option><option value="2">Два</option><option value="3">Три</option><option value="4">Четыре</option></select></td>
      <#--<td><input name=${buildhotel.checkname} type="radio" />${buildhotel.checkname}</td>-->
-     <td> <input id="${buildhotel.checkname}" type="checkbox"> Нажмите для выбора </td>
+     <td> <input id="${buildhotel.checkname}" type="checkbox" onclick="getHotel(${buildhotel.id})"> Нажмите для выбора </td>
      <#--<input name="rezerved" type="radio"-->
 
  </tr>
@@ -172,6 +172,24 @@ box-shadow:0px -5px 0 #880e83 inset;
 </script>-->
 
 <script>
+
+    function getHotel(id) {
+        $.ajax({
+            type: "GET",
+            url: "/entities/" + id, // the URL of the controller action method
+            data: null, // optional data
+            dataType: "html",
+            success: function(result) {
+                // рисуем информацию об отеле из result
+                // рисуем информацию о пользователе из ${user}
+
+            },
+            error : function(req, status, error) {
+                // do something with error
+            }
+        });
+    }
+
     var tableElem = document.getElementById('biglisthotel');
     var elements = tableElem.getElementsByTagName('input');
 
@@ -183,7 +201,7 @@ box-shadow:0px -5px 0 #880e83 inset;
                 if (this.checked) {
 // если checked ...
                     alert(this.id);
-                    document.location.href = "http://localhost:8080/users";
+                    // document.location.href = "http://localhost:8080/enitites/" + ;
                     /*$.ajax({
                         type: "GET",
                         url: "users", // the URL of the controller action method
